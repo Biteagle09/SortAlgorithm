@@ -14,13 +14,13 @@ void main(){
 /**
 Ï£¶ûÅÅĞòËã·¨
 */
-void shellSort(int R[],int n){
+void shellSort(int R[], int n){
 	int temp;
-	for(int gap = n/2;gap>0;gap/=2){
-		for(int i = gap;i<n;i++){
+	for(int gap = n/2; gap > 0; gap /= 2){
+		for(int i = gap; i < n; i++){
 			temp = R[i];
 			int j;
-			for(j = i;j>=gap&&R[j-gap]>temp;j-=gap){
+			for(j = i; j >= gap && R[j-gap] > temp; j -= gap){
 				R[j] = R[j-gap];
 			}
 			R[j] = temp;

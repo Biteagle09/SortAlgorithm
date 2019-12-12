@@ -14,14 +14,14 @@ void main(){
 /**
 冒泡排序算法
 */
-void bubbleSort(int R[],int n){
+void bubbleSort(int R[], int n){
 	int i,j;
 	bool flag;
 	int temp;
-	for(i = n-1;i>0;i--){
+	for(i = n-1; i > 0; i--){
 		flag = false;        //flag用来标记此趟排序是否发生了交换
-		for(j = 1;j<=i;j++){
-			if(R[j-1]>R[j]){
+		for(j = 1; j <= i; j++){
+			if(R[j-1] > R[j]){
 				temp = R[j];
 				R[j] = R[j-1];
 				R[j-1] = temp;
