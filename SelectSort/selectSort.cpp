@@ -12,14 +12,14 @@ void main(){
 /**
 简单选择排序算法
 */
-void selectSort(int R[],int n){
-	int i,j,k;
+void selectSort(int R[], int n){
+	int i, j, k;
 	int temp;
-	for(i = 0;i<n;i++){
+	for(i = 0; i < n; i++){
 		k = i;
 		/*下面这个循环是算法的关键，它从无序序列中挑出一个最小的关键字*/
-		for(j = i+1;j<n;j++){
-			if(R[k]>R[j]){
+		for(j = i + 1; j < n; j++){
+			if(R[k] > R[j]){
 				k = j;
 			}
 		}

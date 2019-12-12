@@ -13,23 +13,23 @@ void main(){
 
 
 
-void quickSort(int R[] ,int low,int high){
+void quickSort(int R[], int low, int high){
 	int temp;
 	int i = low, j = high;
-	if(low<high){
+	if(low < high){
 		temp = R[low];
-		while(i<j){   //将数组中小于temp的放在左边，大于temp的放在右边
-			while(j>i && R[j]>=temp){   //从右往左扫描，找到一个小于temp的关键字
+		while(i < j){   //将数组中小于temp的放在左边，大于temp的放在右边
+			while(j > i && R[j] >= temp){   //从右往左扫描，找到一个小于temp的关键字
 				j--;
 			}
-			if(i<j){
+			if(i < j){
 				R[i] = R[j];         //放在temp左边
 				i++;                 //右移一位
 			}
-			while(i<j && R[i]<temp){    //从左往右扫描，找到一个大于temp的关键字
+			while(i < j && R[i] < temp){    //从左往右扫描，找到一个大于temp的关键字
 				i++;
 			}
-			if(i<j){
+			if(i < j){
 				R[j] = R[i];        //放在temp右边
 				j--;                //左移一位
 			}
