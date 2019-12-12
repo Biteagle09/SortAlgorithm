@@ -5,8 +5,8 @@ void outPutArr(int arr[],int n);
 void quickSort(int R[] ,int low,int high);
 
 void main(){
-	int arr[] = {68,23,34,45,-33,41,999,-1,68};
-	int length = 9;
+	int arr[] = { 68,23,32,0,-33,23,41,999,-1,66 };
+	int length = sizeof(arr) / sizeof(arr[0]);
 	quickSort(arr,0,length-1);
 	outPutArr(arr,length);
 }

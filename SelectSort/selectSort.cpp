@@ -4,8 +4,8 @@ void selectSort(int R[],int n);
 void outPutArr(int arr[],int n);
 
 void main(){
-	int arr[] = {68,23,34,45,-33,41,999,-1,68};
-	int len = 9;
+	int arr[] = { 68,23,32,0,-33,23,41,999,-1,66 };
+	int len = sizeof(arr) / sizeof(arr[0]);
 	selectSort(arr,len);
 }
 
