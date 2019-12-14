@@ -17,12 +17,12 @@ void main(){
 /**
 归并排序
 */
-void mergeSort(int R[],int low,int high){
-	if(low<high){
-		int mid = (low+high)/2;
-		mergeSort(R,low,mid);       //归并排序前半段
-		mergeSort(R,mid+1,high);    //归并排序后半段
-		merge(R,low,mid,high);    //将R数组中low~mid,mid~high两段序列归并为一个序列
+void mergeSort(int R[], int low, int high){
+	if(low < high){
+		int mid = (low + high) / 2;
+		mergeSort(R, low, mid);       //归并排序前半段
+		mergeSort(R, mid+1, high);    //归并排序后半段
+		merge(R, low, mid, high);    //将R数组中low~mid,mid~high两段序列归并为一个序列
 	}
 }
 
@@ -31,20 +31,20 @@ void mergeSort(int R[],int low,int high){
 /**
 将两个序列归并为一个有序序列
 */
-void merge(int R[],int low,int mid, int high){
-	int i,j,k;
-	int n1 = mid - low +1;
+void merge(int R[], int low, int mid, int high){
+	int i, j, k;
+	int n1 = mid - low + 1;
 	int n2 = high - mid;
-	int left[n1],right[n2];
-	for(i = 0;i<n1;i++){
-		left[i] = R[low+i];
+	int left[n1], right[n2];    //此处在C++和C里会有编译错误，解决办法是将测试用例的逻辑结构改为一般线性表
+	for(i = 0; i < n1; i++){
+		left[i] = R[low + i];
 	}
-	for(j = 0;j<n2;j++){
+	for(j = 0; j < n2; j++){
 		right[j] = R[mid + 1 + j];
 	}
-	i = 0;j = 0;k = low;
-	while(i<n1 && j<n2){
-		if(left[i]<=right[j]){
+	i = 0; j = 0; k = low;
+	while(i < n1 && j < n2){
+		if(left[i] <= right[j]){
 			R[k] = left[i++];
 		}else{
 			R[k] = right[j++];
